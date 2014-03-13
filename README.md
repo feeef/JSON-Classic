@@ -13,7 +13,12 @@ Feel free to use and update this code for any projects.
 
 ```c++
 stringstream strm;
-strm << "{\"key\":\"value\", \"number\":1, \"object\":{\"key1\":\"value1\"}, \"array\":[1,2,3]}";
+strm << "{                                  \
+          \"key\":\"value\",                \
+          \"number\":1,                     \
+          \"object\":{\"key1\":\"value1\"}, \
+          \"array\":[1,2,3]                 \
+          }";
 
 JSONReader *reader = new JSONReader();
 
@@ -42,7 +47,7 @@ string str = numberValue->toString();           // ==> "1"
 
 // Objects
 //
-// Both arrays and hash objects are handle by the class JSONObject.
+// Both arrays and hash objects are handled by the class JSONObject.
 // the JSON root element is always a JSONObject. 
 // 
 // The JSONObject::isArray() methods indicates if the object is an array.
@@ -68,7 +73,7 @@ static enum Type
   DATA_TYPE_BOOLEAN,       	//    true -or- false
   DATA_TYPE_NULL,          	//    null
   DATA_TYPE_OBJECT,        	//    { }
-  DATA_TYPE_ARRAY,   			  //    [ ]
+  DATA_TYPE_ARRAY,   			//    [ ]
 }
 ```
 
@@ -88,6 +93,8 @@ array->erase(0);    // (position)
 
 ```c++
 string jsonString = root->toString();
+
+string specificObjectString = root->getValue("array")->toString();
 ```
 
 
