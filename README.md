@@ -7,6 +7,9 @@ This project was created under Code Warrior Pro 1 and has been succesfully teste
 Feel free to use and update this code for any projects.
 
 
+To run the CodeWarrior project, just unstuff JSON-Classic.sit. It is the project file compressed to preserve its CodeWarrior resources.
+
+
 # Features
 
 ## Read JSON
